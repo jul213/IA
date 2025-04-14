@@ -31,6 +31,7 @@ function mFunction(){
         result.data().then(y => {
             xArr.push(x)
             yArr.push(Number(y));
+            if (x == xMax) {plot(xArr,yArr)}
         })
     }
 
