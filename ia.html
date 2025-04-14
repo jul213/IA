@@ -26,6 +26,14 @@ function mFunction(){
     const xArr = []
     const yArr = []
 
+    for (let x=0; x< xMax; x++){
+        let result = model.predict(tf.tensor([Number(x)]))
+        result.data().then(y => {
+            xArr.push(x)
+            yArr.push(Number(y));
+        })
+    }
+
 }
 
 
